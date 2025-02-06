@@ -1,4 +1,5 @@
-@import 'variables.css';
+@import "variables.css";
+
 
 * {
     margin: 0;
@@ -6,21 +7,58 @@
     box-sizing: border-box;
 }
 
+main {
+    margin: 1rem;
+}
+
 body {
     font-family: var(--fontMain);
     background-color: var(--colorBgMain);
     color: var(--colorMain);
 }
+header, footer {
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+a {
+    color: var(--colorMain);
+    text-decoration: none;
+    font-weight: 500;
+    /* &:hover{
 
+    } */
+}
+header {
+    h1 {
+        font-family: var(--fontTitle);
+        font-weight: 800;
+    }
+
+}
+h3 {
+    font-size: 1.5rem;
+}
+
+section {
+    font-size: 4rem;
+    p {
+        font-size: 1rem;
+        color: var(--colorSecondary);
+    }
+}
+
+footer {
+    background-color: var(--colorMain);
+    color: var(--colorBgMain)
+}
 nav {
     ul {
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
         gap: 1rem;
-
         li {
-        list-style-type: none;
+            list-style-type: none;
         }
     }
-}
+} 

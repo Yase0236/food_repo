@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contact.css">
+
+    <script src="js/contact.js" type="module"></script>
+
+    <title>Food repo</title>
+  </head>
+  <body>
+    <header>
+      <h1>Food repo</h1>
+      <!-- <nav> personal prefence where you want to place it</nav> -->
+    </header>
+    <nav>
+
+      <ul>
+        <li><a href="index.html" title="Homepage">Home</a></li>
+        <li><a href="about.htm" title="About page">About us</a></li>
+        <li><a href="contact.htm" title="Contact page">Contact us</a></li>
+      </ul>
+   
+    </nav>
+
+    <main>
+      <header>
+        <h2>Contact</h2>
+      </header>
+      <header>
+      <section id="contact_info"> 
+        <address>
+          <div id="physical_address">
+            <p>Guldbergsgade 29N</p>
+            <p>2200 K&oslash;benhavn N</p>
+          </div>
+          
+          <p>Phone no.: <a href="tel:+4546460000">+45 46 46 00 00</a></p>
+          <p>Email address: <a href="mailto:foodrepo@kea.dk" title="send an email to Food repo">foodrepo@kea.dk</a>
+          </p>
+        </address>
+      </section>
+      <section> 
+          <h3>Contact us via this form</h3>
+
+          <form id="frmContact">
+            <fieldset>
+              <div>
+                <label for="txtName">Full name</label>
+                <input type="text" id="txtName" placeholder="John Doe" required>
+              </div>
+              <div>
+                <label for="txtEmail">Email address</label>
+                <input type="email" id="txtEmail" placeholder="JohnDoe@gmail.com" required>
+              </div>
+              <div>
+                <label for="txtComments">Comments</label>
+                <textarea id="txtComments" placeholder="This is my comment..." required></textarea>
+              </div>
+              <div>
+                <button type="submit">Send</button>
+              </div>
+            </fieldset>  
+          </form>
+      </section>
+      </header>
+    </main>
+
+    <footer>
+      <!-- how to create the copy right logo : &copy; -->
+      <!-- oslash; = ø  -->
+      <p>&copy; 2025 KEA Development</p>
+    </footer>
+
+  </body>
+</html>

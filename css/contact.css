@@ -1,0 +1,42 @@
+@import "variables.css";
+
+#contact_info {
+    margin-bottom: 1rem;
+}
+address {
+    font-style: normal;
+
+    #physical_address {
+        margin-bottom: 2rem;
+    }
+}
+form {
+    margin-top: 1rem;
+
+    fieldset {
+        padding: 1rem;
+        border-radius: 1rem;
+
+        div:not(:last-of-type) {
+            margin-bottom: 0.25rem;
+            * {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        button {
+            padding: 0.5rem 2rem;
+            font-family: var(--fontMain);
+            font-size: 1rem;
+            border-radius: 1rem;
+            color: var(--colorBgMain);
+            background-color: var(--colorMain);
+            border: none;
+        }
+        
+        label {
+            font-size: 1rem;
+        }
+    }
+}
