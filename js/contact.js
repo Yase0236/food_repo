@@ -1,5 +1,5 @@
-let myName = 'KEA';
-const myOtherName = 'CPHBusiness';
+// let myName = 'KEA';
+// const myOtherName = 'CPHBusiness';
 
 document.querySelector('#frmContact').addEventListener('submit', (e) => {
     e.preventDefault();
