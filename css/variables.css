@@ -8,4 +8,6 @@
     
     --fontMain: 'PT sans', sans-serif;
     --fontTitle: 'Exo', sans-serif;
+
+    --maxBodyWidth: 1024px;
 }
