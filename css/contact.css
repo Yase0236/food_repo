@@ -12,7 +12,6 @@
     }
 }
 
-
 #contact_info {
     margin-bottom: 1rem;
 }
@@ -20,7 +19,7 @@ address {
     font-style: normal;
 
     #physical_address {
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 }
 form {
@@ -36,6 +35,10 @@ form {
                 display: block;
                 width: 100%;
             }
+
+            textarea{
+                height: 6rem;
+            }
         }
 
         button {
@@ -48,8 +51,32 @@ form {
             border: none;
         }
         
-        label {
+        /* label {
             font-size: 1rem;
+        } */
+    }
+}
+#contact_message {
+    padding: 1rem;
+    /* font-size: 0.5rem; */
+    border-radius: 1rem;
+    margin: auto;
+
+    header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0;
+
+        button.close{
+            height: 0.5rem;
+            font-size: 1.3rem;
+            border: none;
+            background-color: var(--colorBgMain);
         }
+    }
+    ul {
+        margin-left: 1.5rem;
     }
 }

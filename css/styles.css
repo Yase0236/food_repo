@@ -30,36 +30,46 @@ a {
     font-weight: 500;
 }
 header {
+    color: var(--colorSecondary);
     h1 {
         font-family: var(--fontTitle);
         font-weight: 800;
     }
-
-}
-h3 {
-    font-size: 1.5rem;
 }
 
-section {
-    font-size: 4rem;
+/*section {
+    font-size: 2rem;
     p {
         font-size: 1rem;
         color: var(--colorSecondary);
     }
-}
+} */
 
 footer {
     background-color: var(--colorMain);
     color: var(--colorBgMain);
 }
+
 nav {
     ul {
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
         gap: 1rem;
+
         li {
             list-style-type: none;
         }
     }
 } 
+a {
+    color: var(--colorSecondary);
+    text-decoration: none;
+    &:hover {
+        font-weight: bold;
+    }
+}
+
+button {
+    cursor: pointer;
+}
