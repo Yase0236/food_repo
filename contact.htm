@@ -3,98 +3,97 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/contact.css">
-
+    <title>Contact | Food Repo</title>
+    <link rel="stylesheet" href="css/contact.css" />
+    <script src="js/nav.js" type="module"></script>
     <script src="js/contact.js" type="module"></script>
-
-    <title>Food repo</title>
   </head>
   <body>
     <header>
-      <h1>Food repo</h1>
-      <!-- <nav> personal prefence where you want to place it</nav> -->
+      <h1>Food Repo</h1>
     </header>
-    <nav>
+    <nav id="main">
       <ul>
         <li><a href="index.html" title="Homepage">Home</a></li>
-        <li><a href="about.htm" title="About page">About us</a></li>
-        <li><a href="contact.htm" title="Contact page">Contact us</a></li>
+        <li><button id="btnAbout">About</button></li>
+        <li><a href="contact.htm" title="Contact page">Contact</a></li>
       </ul>
     </nav>
-
+    <nav id="utility_not_logged">
+      <ul>
+        <li><a href="login.htm" title="Log in">Log in</a></li>
+        <li><a href="signup.htm" title="Sign up">Sign up</a></li>
+      </ul>
+    </nav>
+    <nav id="utility_logged">
+      <ul>
+        <li><a href="favourites.htm" title="Favourites">Favourites</a></li>
+        <li><button id="btnLogout">Logout</button></li>
+      </ul>
+    </nav>
     <main>
       <header>
-        <h2>Contact us here</h2>
+        <h2>Contact</h2>
       </header>
-
       <div id="wrapper">
-          <section id="contact_info"> 
-            <header>
-              <h3>Contact information</h3>
-            </header>
-            <address>
-              <div id="physical_address">
-                <p>Guldbergsgade 29N</p>
-                <p>2200 K&oslash;benhavn N</p>
+        <section id="contact_info">
+          <header>
+            <h3>Contact information</h3>
+          </header>
+          <address>
+            <div id="physical_address">
+              <p>Guldbergsgade 29N</p>
+              <p>2200 K&oslash;benhavn N</p>
+            </div>
+            <p>Phone no.: <a href="tel:+45 46 46 00 00">+45 46 46 00 00</a></p>
+            <p>Email address: <a href="mailto:foodrepo@kea.dk" title="Send an email to Food Repo">foodrepo@kea.dk</a></p>
+          </address>
+        </section>
+        <section>
+          <header>
+            <h3>Contact form</h3>
+          </header>
+          <form id="frmContact">
+            <fieldset>
+              <div>
+                <label for="txtName">Full name</label>
+                <input type="text" id="txtName" required />
               </div>
-              
-              <p>Phone no.: <a href="tel:+4546460000">+45 46 46 00 00</a></p>
-              <p>Email address: <a href="mailto:foodrepo@kea.dk" title="send an email to Food repo">foodrepo@kea.dk</a>
-              </p>
-            </address>
-          </section>
-          
-          <section id="contact_form"> 
-            <header>
-              <h3>Contact us via this form</h3>
-            </header>
-            
-            <form id="frmContact">
-              <fieldset>
-                <div>
-                  <label for="txtName">Full name</label>
-                  <input type="text" id="txtName" placeholder="John Doe" required>
-                </div>
-                <div>
-                  <label for="txtEmail">Email address</label>
-                  <input type="email" id="txtEmail" placeholder="JohnDoe@gmail.com" required>
-                </div>
-                <div>
-                  <label for="txtComments">Comments</label>
-                  <textarea id="txtComments" placeholder="This is my comment..." required></textarea>
-                </div>
-                <div>
-                  <button type="submit">Send</button>
-                </div>
-              </fieldset>  
-            </form>
-          </section>
+              <div>
+                <label for="txtEmail">Email address</label>
+                <input type="email" id="txtEmail" required />
+              </div>
+              <div>
+                <label for="txtComments">Comments</label>
+                <textarea id="txtComments" required></textarea>
+              </div>
+              <div>
+                <button type="submit">Send comment</button>
+              </div>
+            </fieldset>
+          </form>
+        </section>
       </div>
     </main>
-
     <footer>
-      <!-- how to create the copy right logo : &copy; -->
-      <!-- oslash; = ø  -->
-      <p>&copy; 2025 KEA Development</p>
+      <p>&copy; 2025 K&oslash;benhavns Erhvervsakademi Development</p>
     </footer>
-
   </body>
-<dialog id="contact_message">
+  <dialog id="contact_message">
     <header>
-        <h2>We received your message</h2>
-        <button class="close">&times;</button>
+      <h2>We got you</h2>
+      <button class="close">&times;</button>
     </header>
     <section>
-        <p>Thank you for your message. We will get back to you shortly.</p>
-        <div>
-            <p>Registered information:</p>
-            <ul>
-                <li>Name: <span id="name"></span></li>
-                <li>Email: <span id="email"></span></li>
-                <li>Comments: <span id="comments"></span></li>
-            </ul>
-        </div>
+      <p>Thank you for your message. We will get back to you shortly.</p>
+      <div>
+        <p>Registered information:</p>
+        <ul>
+          <li>Name: <span id="name"></span></li>
+          <li>Email: <span id="email"></span></li>
+          <li>Comments: <span id="comments"></span></li>
+        </ul>
+      </div>
     </section>
-</dialog>
+  </dialog>
 </html>

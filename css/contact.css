@@ -1,4 +1,4 @@
-@import "variables.css";
+/* @import "variables.css";
 
 @media (min-width: 640px) {
     #wrapper {
@@ -53,12 +53,12 @@ form {
         
         /* label {
             font-size: 1rem;
-        } */
+        } 
     }
 }
 #contact_message {
     padding: 1rem;
-    /* font-size: 0.5rem; */
+    /* font-size: 0.5rem; 
     border-radius: 1rem;
     margin: auto;
 
@@ -78,5 +78,32 @@ form {
     }
     ul {
         margin-left: 1.5rem;
+    }
+} */
+
+@import 'styles.css';
+@import 'form.css';
+
+@media (min-width: 640px) {
+    #wrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        gap: 1rem;
+        > section {
+            flex: 1 0 auto;
+        }
+    }
+}
+
+#contact_info {
+    margin-bottom: 1rem;
+}
+
+address {
+    font-style: normal;
+
+    #physical_address {
+        margin-bottom: 1rem;
     }
 }

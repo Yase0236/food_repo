@@ -1,7 +1,9 @@
 import { BASE_URL } from "./info.js";
+import { handleError } from "./api.js";
 
 const DEFAULT_RECIPES = 10;
 
+// eslint-disable-next-line no-unused-vars
 const showRandomRecipesWithInnerHTML = (numRecipes = DEFAULT_RECIPES) => {
   for (let index = 0; index < numRecipes; index++) {
     fetch(`${BASE_URL}/random.php`)
@@ -25,6 +27,7 @@ const showRandomRecipesWithInnerHTML = (numRecipes = DEFAULT_RECIPES) => {
   }
 };
 
+// eslint-disable-next-line no-unused-vars
 const showRandomRecipesWithInnerHTMLAndOnePageRefresh = async (numRecipes = DEFAULT_RECIPES) => {
   let recipeList = "";
   for (let index = 0; index < numRecipes; index++) {
@@ -51,6 +54,7 @@ const showRandomRecipesWithInnerHTMLAndOnePageRefresh = async (numRecipes = DEFA
   }
 };
 
+// eslint-disable-next-line no-unused-vars
 const showRandomRecipesWithCreateElement = async (numRecipes = DEFAULT_RECIPES) => {
   const fragment = document.createDocumentFragment();
   for (let index = 0; index < numRecipes; index++) {
@@ -112,9 +116,13 @@ const showRandomRecipes = async (numRecipes = DEFAULT_RECIPES) => {
         card.querySelector(".pill:first-of-type").innerText = data.strCategory;
         card.querySelector(".pill:last-of-type").innerText = data.strArea;
 
+        card.querySelectorAll("a").forEach((link) => {
+          link.href = `recipe.htm?id=${data.idMeal}`;
+        });
+
         fragment.append(card);
       })
-      .catch((error) => console.log(error));
+      .catch(handleError);
   }
   document.querySelector("#recipe-list").append(fragment);
 };
